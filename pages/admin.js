@@ -8,9 +8,8 @@ function Admin({ data }) {
   const [open, setOpen] = useState(false);
   const getData = async () => {
     const querySnapshot = await getDocs(collection(db, "packages"));
-    querySnapshot.forEach((doc) => {
-      setDataArr([doc.data()]);
-    });
+    const data = querySnapshot.docs.map((doc) => doc.data());
+    setDataArr([...data]);
   };
 
   return (
