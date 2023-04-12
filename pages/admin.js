@@ -23,7 +23,7 @@ function Admin({ data }) {
           return (
             <div
               key={item.id}
-              className="mt-8 h-full w-full rounded-lg bg-slate-800 p-4"
+              className="mt-8 w-full rounded-lg bg-slate-800 p-4"
             >
               <EditModel
                 open={open}
