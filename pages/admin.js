@@ -24,12 +24,6 @@ function Admin({ data }) {
               key={item.id}
               className="mt-8 w-full rounded-lg bg-slate-800 p-4"
             >
-              <EditModel
-                open={open}
-                setOpen={setOpen}
-                id={item.id}
-                getData={getData}
-              />
               <div className="flex w-full flex-col items-start">
                 <label className="text-xl font-bold text-white">
                   ID:{" "}
@@ -71,12 +65,7 @@ function Admin({ data }) {
                 </label>
               </div>
               <div className="mt-8 flex w-full flex-col items-start">
-                <button
-                  onClick={() => setOpen(true)}
-                  className="rounded bg-gradient-to-t from-emerald-500 to-emerald-900 px-4 py-2 font-bold text-white"
-                >
-                  Edit
-                </button>
+                <EditModel id={item.id} getData={getData} />
               </div>
             </div>
           );
