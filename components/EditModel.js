@@ -113,7 +113,7 @@ export default function EditModel({ open, setOpen, id, getData }) {
                       onChange={(e) => setStatus(e.target.value)}
                     >
                       {Statuses.map((status) => (
-                        <option key={status} value={status}>
+                        <option key={status} value={status} className="text-emerald-500 bg-slate-800">
                           {status}
                         </option>
                       ))}
